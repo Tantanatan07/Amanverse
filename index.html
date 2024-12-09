@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;NYT Games&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f9f9f9;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #282c34;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;NYT Games&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Play Wordle, Strands, Connections, and Crossword!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="games"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="wordle" class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Wordle&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Guess the 5-letter word:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="wordle-input" type="text" maxlength="5" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="checkWordle()"&gt;Submit&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="wordle-feedback"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="strands" class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Strands&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Arrange the letters to form a word:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="strands-letters"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="strands-input" type="text" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="checkStrands()"&gt;Submit&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="strands-feedback"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="connections" class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Connections&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Group items with similar themes:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="connections-grid"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="connections-feedback"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="crossword" class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Crossword&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Fill the blanks:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="crossword-grid"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="crossword-feedback"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Wordle Game</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const wordleWord = "hello";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let wordleAttempts = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function checkWordle() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const input = document.getElementById("wordle-input").value.toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const feedback = document.getElementById("wordle-feedback");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>wordleAttempts++;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (input === wordleWord) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback.innerHTML = `&lt;p&gt;Correct! You guessed it in ${wordleAttempts} attempts.&lt;/p&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback.innerHTML = `&lt;p&gt;Incorrect, try again!&lt;/p&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Strands Game</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const strandsWord = "apple";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const strandsLetters = strandsWord.split('').sort(() =&gt; Math.random() - 0.5);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("strands-letters").innerHTML = strandsLetters.join(" ");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function checkStrands() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const input = document.getElementById("strands-input").value.toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const feedback = document.getElementById("strands-feedback");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (input === strandsWord) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback.innerHTML = `&lt;p&gt;Correct! The word is "${strandsWord}".&lt;/p&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback.innerHTML = `&lt;p&gt;Incorrect, try again!&lt;/p&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Connections Game</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const connectionsGroups = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>["apple", "banana", "cherry", "grape"],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>["dog", "cat", "bird", "fish"]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const connectionsItems = connectionsGroups.flat().sort(() =&gt; Math.random() - 0.5);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const connectionsContainer = document.getElementById("connections-grid");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>connectionsItems.forEach((item, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const button = document.createElement("button");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>button.innerText = item;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>button.onclick = () =&gt; selectConnection(button, index);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>connectionsContainer.appendChild(button);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let selectedConnections = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function selectConnection(button, index) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>button.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>selectedConnections.push(connectionsItems[index]);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (selectedConnections.length === connectionsGroups[0].length) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const isCorrect = connectionsGroups.some(group =&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>group.every(item =&gt; selectedConnections.includes(item))</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const feedback = document.getElementById("connections-feedback");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (isCorrect) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>feedback.innerHTML = "&lt;p&gt;Correct group!&lt;/p&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>feedback.innerHTML = "&lt;p&gt;Incorrect group, try again!&lt;/p&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>selectedConnections = [];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Array.from(connectionsContainer.children).forEach(b =&gt; (b.disabled = false));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Crossword Game</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const crosswordClues = ["A fruit (5 letters)", "A vehicle (3 letters)"];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const crosswordAnswers = ["apple", "car"];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const crosswordGrid = document.getElementById("crossword-grid");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>crosswordClues.forEach((clue, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const div = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>div.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;${clue}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input id="crossword-${index}" type="text" maxlength="${crosswordAnswers[index].length}" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>crosswordGrid.appendChild(div);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function checkCrossword() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const feedback = document.getElementById("crossword-feedback");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const correct = crosswordAnswers.every((answer, index) =&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById(`crossword-${index}`).value.toLowerCase() === answer</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (correct) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback.innerHTML = "&lt;p&gt;All answers are correct!&lt;/p&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback.innerHTML = "&lt;p&gt;Some answers are incorrect, try again!&lt;/p&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
